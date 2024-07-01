@@ -1,0 +1,112 @@
+-É uma estrutura de chave-valor, ou seja, os valores (dados) estão sempre associados a uma chave.
+
+-Dicionário vazio
+dictionary = {}
+print(type(dictionary))
+
+# exemplo
+
+location = {
+"Lat": -22.817087 ,
+"Long": -47.069750
+}
+print(type(location))
+
+||| return = <class 'dict'> ||| 
+
+
+-Declaração explicita >dict<
+
+dictionary = {}
+print(type(dictionary))
+
+location = dict({
+"Lat": -22.817087 ,
+"Long": -47.069750
+})
+print(type(location))
+
+- Chaves + valores de diferentes tipos
+
+dictionary = {
+1.2: True,
+123: "One Two Three",
+"cat":"dog",
+("X","Y"):(2,3,5)
+}
+print(dictionary)
+
+||| return = {1.2: True, 123: 'One Two Three', 'cat': 'dog', ('X', 'Y'): (2, 3, 5)} |||
+
+- Chaves na ordem de criação
+
+dictionary = {
+"Z": 1,
+"A": 2,
+"C": 3
+}
+print(dictionary)
+
+||| return = {'Z': 1, 'A': 2, 'C': 3} |||
+
+# Acesso aos valores do dicionário
+
+<dictionary>[<key>]
+
+
+#Exemplo de acesso
+
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain"
+}
+print(dictionary["Name"])
+print(dictionary["Age"])
+print(dictionary["Occupation"])
+
+|||
+return = 
+
+Jack Sparrow
+35
+Captain
+
+|||
+
+
+
+#### Ver presença de uma chave: >in<
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain"
+}
+
+print("City" in dictionary)
+print("Name" in dictionary)
+
+|||
+return = 
+False
+True
+|||
+
+
+##### Ver presença de uma chave: >get<
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain"
+}
+
+print(dictionary.get("Name"))
+print(dictionary.get("City"))
+
+
+|||
+return = 
+Jack Sparrow
+None
+|||
+
