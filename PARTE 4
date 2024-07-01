@@ -1,0 +1,67 @@
+# Cópia de dicionário
+
+-Similar às listas
+-É possivel atribuir um dicionário para diferentes variáveis, mas as variáveis estarão relacionadas ao mesmo dicionário(objeto)
+
+# Cópia independente: >copy<
+dic_a = {"Name":"John","Age":18}
+print(dic_a)
+dic_b = dic_a
+dic_b["Name"] = "Mary"
+print(dic_b)
+print(dic_a)
+
+
+||| return = 
+{'Name': 'John', 'Age': 18}
+{'Name': 'Mary', 'Age': 18}
+{'Name': 'Mary', 'Age': 18}
+|||
+
+# Dicionário a partir de listas
+
+- Uso da função zip
+-zip recebe 2 parâmetros: listas de chaves e valores
+
+people = ["Alice","Beatriz","Carlos"]
+phones = ["212-2517","212-5630","613-5080"]
+contacts = dict(zip(people,phones))
+print(contacts)
+
+||| return =
+{'Alice': '212-2517', 'Beatriz': '212-5630', 'Carlos': '613-5080'}
+|||
+
+# Dicionário de listas
+
+people = {}
+n = int(input("How many people?"))
+for i in range(n):
+  name = input()
+  age = int(input())
+  sex = input()
+  people[name] = [age,sex]
+print(people)
+print(people["Beatriz"][1])
+
+||| return = 
+{'Beatriz': [16, 'fem'], 'claudio': [18, 'masc']}
+fem
+|||
+
+# Dicionário de dicionários
+
+people = {}
+n = int(input("How many people?"))
+for i in range(n):
+  name = input()
+  age = int(input())
+  sex = input()
+  people[name] = {"age":age,"sex":sex}
+print(people)
+print(people["Beatriz"]["sex"])
+
+||| return = 
+{'Beatriz': {'age': 4, 'sex': 'fem'}, 'andrey': {'age': 19, 'sex': 'masc'}}
+fem
+|||
