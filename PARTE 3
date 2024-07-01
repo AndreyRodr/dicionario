@@ -1,0 +1,106 @@
+# Método >update<
+
+-Funcionamento
+-Recebe como parametro outro dicionário
+-O dicionário original é modificado com base no dicionário infoprmado como parametro
+
+dic_a = {"A":"Airplane","B":"Boat"}
+dic_b = {"B": "Balloon","C":"Car"}
+print(dic_a)
+print(dic_b)
+dic_a.update(dic_b)
+print(dic_a)
+
+||| return = 
+{'A': 'Airplane', 'B': 'Boat'}
+{'B': 'Balloon', 'C': 'Car'}
+
+
+{'A': 'Airplane', 'B': 'Balloon', 'C': 'Car'}
+|||
+
+# Métodos >keys< e >values<
+
+-keys retorna as chaves
+
+place = {"Lat": -22.817087,"Long": -47.069750}
+print(place.keys())
+print(list(place.keys()))
+
+||| return = 
+dict_keys(['Lat', 'Long'])
+['Lat', 'Long']
+|||
+
+-values retorna os valores
+
+place = {"Lat": -22.817087,"Long": -47.069750}
+print(place.values())
+print(list(place.values()))
+
+||| return =
+dict_values([-22.817087, -47.06975])
+[-22.817087, -47.06975]
+|||
+
+# Método >items<
+
+-Funcionamento
+-Retorna uma estrutura que pode ser convertida para uma lista de tuplas, onde cada tupla é composta pelo par (chave, valor).
+
+place = {"Lat": -22.817087,"Long": -47.069750}
+print(place.items())
+print(list(place.items()))
+
+||| return = 
+dict_items([('Lat', -22.817087), ('Long', -47.06975)])
+[('Lat', -22.817087), ('Long', -47.06975)]
+|||
+
+# Iterando sobre as >chaves<
+
+dic = {
+"A":"Avocado",
+"B":"Banana",
+"C":"Cacao"
+}
+for letter in dic.keys():
+  print("Letter",letter)
+
+||| return =
+Letter A
+Letter B
+Letter C
+|||
+
+# Iterando sobre os >valores<
+
+dic = {
+"A":"Avocado",
+"B":"Banana",
+"C":"Cacao"
+}
+for fruit in dic.values():
+  print("Fruit",fruit)
+
+||| return = 
+Fruit Avocado
+Fruit Banana
+Fruit Cacao
+||| 
+
+# Iterando sobre os >itens<
+
+dic = {
+"A":"Avocado",
+"B":"Banana",
+"C":"Cacao"
+}
+for (letter, fruit) in dic.items():
+  print("Fruit with letter", letter,":", fruit, sep= "")
+
+||| return = 
+Fruit with letterA:Avocado
+Fruit with letterB:Banana
+Fruit with letterC:Cacao
+|||
