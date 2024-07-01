@@ -1,0 +1,102 @@
+# Tamanho do dicionario: len
+
+- Cada chave+valor é um elemento
+
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain"
+}
+print(len(dictionary))
+
+||| return = 3 |||
+
+# Adição de novos valores
+
+- Estrutura
+<dictionary>[<new_key>]= <new_value>
+
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain"
+}
+dictionary["City"] = "New Orleans"
+print(dictionary)
+
+||| return = {'Name': 'Jack Sparrow', 'Age': 35, 'Occupation': 'Captain', 'City': 'New Orleans'} |||
+
+# Atualização de um valor
+
+- Estrutura
+<dictionary>[<key>]=<new_value>
+
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain"
+}
+dictionary["Age"] = 37
+print(dictionary["Age"])
+
+||| return = 37 |||
+
+# Removendo com >pop<
+
+- Estrutura de remoção
+- Parâmetro: a chave.
+- retorno: o valor.
+-Em caso de chave ausente no dicionário, o comando gerará um erro
+
+
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain",
+"City":"New Orleans"
+}
+occupation = dictionary.pop("Occupation")
+print(occupation)
+print(dictionary)
+
+||| 
+  return = 
+Captain
+{'Name': 'Jack Sparrow', 'Age': 35, 'City': 'New Orleans'}
+
+|||
+
+# Remoção de chave inexistente
+
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain",
+"City":"New Orleans"
+}
+
+cpf = dictionary.pop("CPF")
+del dictionary["CNH"]
+
+||| KeyError: 'CPF' |||
+
+# Removendo com <popitem>
+
+-Remove sempre o último par(chave,valor)
+-O retorno do método retorna o par removido em forma de tupla
+-Erro se o dicionário estiver vazio
+
+dictionary = {
+"Name": "Jack Sparrow",
+"Age": 35,
+"Occupation": "Captain",
+"City":"New Orleans"
+}
+print(dictionary)
+print(dictionary.popitem())
+
+||| return= 
+{'Name': 'Jack Sparrow', 'Age': 35, 'Occupation': 'Captain', 'City': 'New Orleans'}
+('City', 'New Orleans')
+|||
+
